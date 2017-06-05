@@ -57,6 +57,11 @@ spl_autoload_register(array('Kohana', 'auto_load'));
 ini_set('unserialize_callback_func', 'spl_autoload_call');
 
 /**
+ * Enable composer autoload libraries
+ */
+// require DOCROOT . '/vendor/autoload.php';
+
+/**
  * Set the mb_substitute_character to "none"
  *
  * @link http://www.php.net/manual/function.mb-substitute-character.php
@@ -120,6 +125,7 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
+	// 'encrypt'    => MODPATH.'encrypt',    // Encryption supprt
 	// 'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
